@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+p1 = Player.create! name: "Curry"
+p2 = Player.create! name: "Thompson"
+p3 = Player.create! name: "Igoudala"
+p4 = Player.create! name: "Lee"
+p5 = Player.create! name: "Bogut"
