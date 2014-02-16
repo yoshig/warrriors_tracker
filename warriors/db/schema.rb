@@ -11,20 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140213051534) do
+ActiveRecord::Schema.define(version: 20140216222922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assists", force: true do |t|
+    t.integer "player_id",   null: false
+    t.integer "assisted_id", null: false
+  end
+
+  create_table "blocks", force: true do |t|
+    t.integer "player_id"
+  end
 
   create_table "players", force: true do |t|
     t.string "name"
   end
 
   create_table "shots", force: true do |t|
-    t.integer "player_id"
-    t.integer "points"
-    t.boolean "made"
-    t.string  "shot_type"
+    t.integer "player_id", null: false
   end
 
 end
